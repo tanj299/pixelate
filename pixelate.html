@@ -10,12 +10,11 @@
   </head>
   <body>
       <h1> Pixelate </h1>
-      <table id="pixel-matrix">
         Rows:
-        <button class="insertRow" id="insertRow" onclick="insertRow()">+</button>
+        <button class="insertRow" id="insertRow" onclick="addRow('pixel-matrix')">+</button>
         <button class="deleteRow" id="deleteRow" onclick="deleteRow()">-</button><br>
         Columns:
-        <button class="insertCol" id="insertCol" onclick="insertCol()">+</button>
+        <button class="insertCol" id="insertCol" onclick="addCol()">+</button>
         <button class="deleteCol" id="deleteCol" onclick="deleteCol()">-</button><br>
 
 
@@ -30,7 +29,7 @@
               <a href="#orange">Orange</a>
             </div>
         </div>
-      <table id="table-matrix">
+      <table id="pixel-matrix">
           <thead>
               <tr>
                   <th colspan="2">The table header</th>
