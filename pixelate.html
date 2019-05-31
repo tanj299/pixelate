@@ -10,10 +10,25 @@
   </head>
   <body>
       <h1> Pixelate </h1>
-        <button class="insertRow" id="rowPlus">+</button>
-        <button class="subRow" id="rowMinus">-</button><br>
-        <button class="insertCol" id="colPlus">+</button>
-        <button class="subCol" id="colMinus">-</button>
+        Rows: 
+        <button class="insertRow" id="insertRow" onclick="insertRow()">+</button>
+        <button class="deleteRow" id="deleteRow" onclick="deleteRow()">-</button><br>
+        Columns: 
+        <button class="insertCol" id="insertCol" onclick="insertCol()">+</button>
+        <button class="deleteCol" id="deleteCol" onclick="deleteCol()">-</button><br>
+
+        
+        <div class="dropdown">
+          Colors: <button onclick="dropDown()" class="dropDownButton">Colors</button>
+            <div id="dropdownContent" class="dropdownContent">
+              <a href="#red">Red</a>
+              <a href="#blue">Blue</a>
+              <a href="#yellow">Yellow</a>
+              <a href="#purple">Purple</a>
+              <a href="#green">Green</a>
+              <a href="#orange">Orange</a>
+            </div>
+        </div>
       <table id="table-matrix">
           <thead>
               <tr>  
@@ -31,6 +46,10 @@
               </tr>
           </tbody>
       </table>
+
+      <button onclick="fillCells()" class="fillCells">Fill All Cells</button>
+      <button onclick="fillUncoloredCells()" class="fillUncoloredCells">Fill Uncolored Cells</button>
+      <button onclick="clear()" class="clear" class="clear">Clear</button>
 
   </body>
 </html>
