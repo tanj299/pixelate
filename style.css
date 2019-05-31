@@ -31,6 +31,23 @@ td  {
 	margin: 10px 0px 0px 0px;
 	width: 20px;
 	height: 17px;
+	cursor: pointer;
+}
+
+.insertRow:hover{
+  background-color: aqua;
+}
+
+.deleteRow:hover {
+  background-color: aqua;
+}
+
+.insertCol:hover {
+  background-color: aqua;
+}
+
+.deleteCol:hover {
+  background-color: aqua;
 }
 
 /* dropdown */
