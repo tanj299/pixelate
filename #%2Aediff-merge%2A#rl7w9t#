@@ -10,15 +10,14 @@
   </head>
   <body>
       <h1> Pixelate </h1>
-      <table id="pixel-matrix">
-        Rows:
+        Rows: 
         <button class="insertRow" id="insertRow" onclick="insertRow()">+</button>
         <button class="deleteRow" id="deleteRow" onclick="deleteRow()">-</button><br>
-        Columns:
+        Columns: 
         <button class="insertCol" id="insertCol" onclick="insertCol()">+</button>
         <button class="deleteCol" id="deleteCol" onclick="deleteCol()">-</button><br>
 
-
+        
         <div class="dropdown">
           Colors: <button onclick="dropDown()" class="dropDownButton">Colors</button>
             <div id="dropdownContent" class="dropdownContent">
@@ -32,7 +31,7 @@
         </div>
       <table id="table-matrix">
           <thead>
-              <tr>
+              <tr>  
                   <th colspan="2">The table header</th>
               </tr>
           </thead>
@@ -41,6 +40,7 @@
               <tr> <td> </td> <td> </td> </tr>
           </tbody>
       </table>
+
       <button onclick="fillCells()" class="fillCells">Fill All Cells</button>
       <button onclick="fillUncoloredCells()" class="fillUncoloredCells">Fill Uncolored Cells</button>
       <button onclick="clear()" class="clear" class="clear">Clear</button>
