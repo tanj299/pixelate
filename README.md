@@ -1,2 +1,2 @@
-# pixelate-
+# pixelate
 Pixelate project 
