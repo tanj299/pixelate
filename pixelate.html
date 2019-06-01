@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Assig 4</title>
     <link rel="stylesheet" href="style.css">
-    <script src="pixelate-scripts.js"></script>
+
   </head>
   <body>
       <h1> Pixelate </h1>
         Rows:
-        <button class="insertRow" id="insertRow" onclick="addRow('pixel-matrix')">+</button>
+        <button class="insertRow" id="addRow" onclick="addRow()">+</button>
         <button class="deleteRow" id="deleteRow" onclick="deleteRow()">-</button><br>
         Columns:
-        <button class="insertCol" id="insertCol" onclick="addCol()">+</button>
+        <button class="insertCol" id="addCol" onclick="addCol()">+</button>
         <button class="deleteCol" id="deleteCol" onclick="deleteCol()">-</button><br>
 
 
@@ -30,20 +30,12 @@
             </div>
         </div>
       <table id="pixel-matrix">
-          <!-- don't need this part 
-          <thead>
-              <tr>
-                  <th colspan="2">The table header</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr> <td> </td> <td> </td> </tr>
-              <tr> <td> </td> <td> </td> </tr>
-          </tbody> -->
       </table>
+
       <button onclick="fillCells()" class="fillCells">Fill All Cells</button>
-      <button onclick="fillUncoloredCells()" class="fillUncoloredCells">Fill Uncolored Cells</button>
+      <button onclick="fillUncoloredCells()" class="fillUncoloredCells">Fill Uncolored</button>
       <button onclick="clear()" class="clear" class="clear">Clear</button>
 
+      <script src="pixelate-scripts.js"></script>
   </body>
 </html>

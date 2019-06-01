@@ -3,6 +3,7 @@
 html {
     background-color: black;
     color: white;
+    text-align: center;
 }
 
 h1,h2,h3,h4,p, {
@@ -24,6 +25,7 @@ td  {
     height: 50px;
 }
 
+
 .insertRow, .deleteRow, .insertCol, .deleteCol {
 	background-color: white;
 	border: none;
@@ -34,60 +36,83 @@ td  {
 	cursor: pointer;
 }
 
+.fillCells, .fillUncoloredCells, .clear {
+	background-color: white;
+	border: none;
+	color: black;
+	width: 100px;
+	height: 17px;
+	cursor: pointer;
+}
+
+.fillCells:hover {
+	background-color: aqua;
+}
+
+.flllUncoloredCells:hover {
+	background-color: aqua;
+}
+
+.clear:hover {
+	background-color: aqua;
+}
 .insertRow:hover{
-  background-color: aqua;
+	background-color: aqua;
 }
 
 .deleteRow:hover {
-  background-color: aqua;
+	background-color: aqua;
 }
 
 .insertCol:hover {
-  background-color: aqua;
+	background-color: aqua;
 }
 
 .deleteCol:hover {
-  background-color: aqua;
+ 	background-color: aqua;
 }
 
 /* dropdown */
 
 .dropdownButton {
-  background-color: white;
-  color: black;
-  font-size: 16px;
-  margin: 10px 0px 0px 0px;
-  border: none;
-  cursor: pointer;
+	background-color: white;
+	color: black;
+	margin: 10px 0px 0px 0px;
+	width: 60px;
+	height: 17px;
+	border: none;
+	cursor: pointer;
 }
 
 .dropdownButton:hover, .dropdownButton:focus {
-  background-color: aqua;
+  	background-color: aqua;
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
+	position: relative;
+	display: inline-block;
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	overflow: auto;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
 }
 
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
 }
 
-.dropdown a:hover {background-color: #ddd;}
+.dropdown a:hover {
+	background-color: #ddd;
+}
 
 .show {
 	display: block;
