@@ -1,15 +1,61 @@
-function addRow(tableID) {
-    // Get a reference to the table
-    let tableRef = document.getElementById(tableID);
+const table = document.getElementById("pixel-matrix");
+let rows = 0; 
+let columns = 1; 
 
-    // Insert a row at the end of the table
-    let newRow = tableRef.insertRow(-1);
+function addRow () {
+	// append row at end of table 
+	let appendRow = table.insertRow(-1);
 
-    // Insert a cell in the row at index 0
-    let newCell = newRow.insertCell(0);
+	for (let i = 0; i < columns; i++) {
+		let newCell = appendRow.insertCell(i);
+		newCell.style.backgroundColor = "white";
+	}
 
-    newCell.appendChild(newText);
+	// increment row count
+	rows++;
 }
+
+function deleteRow() {
+	// checks if row is less than 0 
+	if(rows < 0) {
+		rows = 0;
+	}
+
+	// delete row
+	table.deleteRow(-1);
+
+	// decrement rows
+	rows--;
+}
+
+
+function addCol() {
+	// append column at end of table 
+	// assert: cells are added to each row 
+	for(let i = 0; i < rows; i++) {
+		let newCell = table.rows[i].insertCell(-1);
+		newCell.style.backgroundColor = "white"; 
+	}
+
+	// increment column count 
+	columns++;
+}
+
+function deleteCol() {
+	// checks if column is less than 0 
+	if(columns < 0) {
+		columns = 0; 
+	}
+
+	// remove columns 
+	for(let i = 0; i < rows; i++) {
+		table.rows[i].deleteCell(-1);
+	}
+
+	// decrement columns
+	columns--;
+}
+
 
 // Call addRow() with the table's ID
 
