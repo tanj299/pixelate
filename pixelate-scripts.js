@@ -1,9 +1,14 @@
 const table = document.getElementById("pixel-matrix");
 let rows = 0; 
 let columns = 1; 
-let currentColor = "blue" ;
-const colorSelect = document.getElementById("colors");
+let currentColor = "white" ;
+const colorSelect = document.getElementById("dropdownColors");
 
+// change color in dropdown menu
+// "change" is a JS event and fires when a new choice is made in a "select" element
+colorSelect.addEventListener("change", () => {
+	currentColor = colorSelect.options[colorSelect.selectedIndex].value; 
+});
 
 function addRow () {
 	// append row at end of table 
@@ -12,7 +17,21 @@ function addRow () {
 	for (let i = 0; i < columns; i++) {
 		let newCell = appendRow.insertCell(i);
 		newCell.style.backgroundColor = "white";
+
+		// changes color of cell 
+		newCell.addEventListener("mousedown", function(event) {
+			this.style.backgroundColor = currentColor; 
+		});
+
+		newCell.addEventListener("mouseover", function(event) {
+			if(mousedown == true) {
+				this.style.backgroundColor = currentColor; 
+			}
+		});
 	}
+
+	// @return: selectedIndex returns a dropdown menu's index option; starts at 0
+	currentColor = colorSelect.options[colorSelect.selectedIndex].value; 
 
 	// increment row count
 	rows++;
@@ -38,7 +57,23 @@ function addCol() {
 	for(let i = 0; i < rows; i++) {
 		let newCell = table.rows[i].insertCell(-1);
 		newCell.style.backgroundColor = "white"; 
+
+		// changes color of cell 
+		newCell.addEventListener("mousedown", function(event) {
+			this.style.backgroundColor = currentColor; 
+		});
+
+		newCell.addEventListener("mouseover", function(event) {
+			// assert: mousedown = false; otherwise, color changes on hover 
+			// when column is added since it is the last event happening 
+			if(mousedown = false) { 
+				this.style.backgroundColor = currentColor; 
+			}
+		});
 	}
+
+	// @return: selectedIndex returns a dropdown menu's index option; starts at 0
+	currentColor = colorSelect.options[colorSelect.selectedIndex].value;
 
 	// increment column count 
 	columns++;
@@ -53,6 +88,7 @@ function deleteCol() {
 	// remove columns 
 	for(let i = 0; i < rows; i++) {
 		table.rows[i].deleteCell(-1);
+
 	}
 
 	// decrement columns
@@ -60,20 +96,5 @@ function deleteCol() {
 }
 
 
-// Call addRow() with the table's ID
 
-function dropdown() {
-	document.getElementById("dropdownContent").classList.toggle("show");
-}
 
-window.onclick = function(event) {
-  if (!event.target.matches('.dropdownButton')) {
-    let dropdowns = document.getElementsByClassName("dropdown-content");
-    for (let i = 0; i < dropdowns.length; i++) {
-      let openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
