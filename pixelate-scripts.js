@@ -1,6 +1,9 @@
 const table = document.getElementById("pixel-matrix");
 let rows = 0; 
 let columns = 1; 
+let currentColor = "blue" ;
+const colorSelect = document.getElementById("colors");
+
 
 function addRow () {
 	// append row at end of table 
