@@ -1,4 +1,4 @@
-// Jayson Tan | Raphael Vente 
+// Jayson Tan | Ralph Vente 
 // Course: JS Bootcamp
 // Instructor(s): AJ Lapid / Justin Mintzer / Frank Rose 
 // Assignment: Assignment 4
