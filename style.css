@@ -1,9 +1,14 @@
 @import 'https://fonts.googleapis.com/css?family=Noto+Sans+HK:700';
 
+/* main */
 html {
     background-color: black;
     color: white;
     text-align: center;
+}
+
+body {
+	text-align: center;
 }
 
 h1,h2,h3,h4,p, {
@@ -11,20 +16,19 @@ h1,h2,h3,h4,p, {
 }
 
 table {
-    cell-spacing: 5px;
     margin: 10px;
     border-spacing: 5px 5px;
     border-color: black;
 }
 
+/* no borders; otherwise table adds random 1px black border everywhere*/
 td  {
-    background-color: red;
-    border-color: black;
-    border-width: 10px;
+	border: none;
     width: 50px;
     height: 50px;
 }
 
+/* buttons */
 
 .insertRow, .deleteRow, .insertCol, .deleteCol {
 	background-color: white;
@@ -36,7 +40,7 @@ td  {
 	cursor: pointer;
 }
 
-.fillCells, .fillUncoloredCells, .clear {
+.fillCells, .fillUncoloredCells , .clear {
 	background-color: white;
 	border: none;
 	color: black;
@@ -49,7 +53,7 @@ td  {
 	background-color: aqua;
 }
 
-.flllUncoloredCells:hover {
+.fillUncoloredCells:hover {
 	background-color: aqua;
 }
 
@@ -74,7 +78,7 @@ td  {
 
 /* dropdown */
 
-.dropdownButton {
+select {
 	background-color: white;
 	color: black;
 	margin: 10px 0px 0px 0px;
@@ -82,38 +86,4 @@ td  {
 	height: 17px;
 	border: none;
 	cursor: pointer;
-}
-
-.dropdownButton:hover, .dropdownButton:focus {
-  	background-color: aqua;
-}
-
-.dropdown {
-	position: relative;
-	display: inline-block;
-}
-
-.dropdown-content {
-	display: none;
-	position: absolute;
-	background-color: #f1f1f1;
-	min-width: 160px;
-	overflow: auto;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	z-index: 1;
-}
-
-.dropdown-content a {
-	color: black;
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;
-}
-
-.dropdown a:hover {
-	background-color: #ddd;
-}
-
-.show {
-	display: block;
 }
